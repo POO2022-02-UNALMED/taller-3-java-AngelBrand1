@@ -7,7 +7,8 @@ public class TestTV {
 		
 	    TV tv1 = new TV(marca1, true);
 	    TV tv2 = new TV(marca2, false);
-	    
+	    TV tv3 = new TV(marca2, false);
+
 	    tv1.setPrecio(2000);
 	    tv2.setCanal(90);
 	    tv1.setCanal(121);
@@ -25,5 +26,7 @@ public class TestTV {
 	    System.out.println(tv1.getPrecio());
 	    System.out.println(tv1.getMarca().getNombre());
 	    System.out.println(tv1.getCanal());
+	    System.out.println(TV.getNumTV());
+
 	}
 }
