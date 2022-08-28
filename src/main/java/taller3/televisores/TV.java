@@ -59,6 +59,10 @@ public class TV {
 		return numTV;
 	}
 	
+	public static void setNumTV(int num) {
+		numTV = num;
+	}
+	
 	public boolean getEstado() {
 		return this.estado;
 	}
