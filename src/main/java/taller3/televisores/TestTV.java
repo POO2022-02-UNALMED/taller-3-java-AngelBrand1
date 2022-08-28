@@ -19,12 +19,13 @@ public class TestTV {
 		System.out.println(tv2.getVolumen());
 		
 		Control control1 = new Control();
-		control1.enlazar(tv1);
+		control1.enlazar(tv2);
 		control1.turnOff();
 		control1.setCanal(50);
 		control1.turnOn();
 		control1.canalUp();
-		control1.volumenUp();
+		//control1.volumenUp();
+		control1.volumenDown();
 		TV.setNumTV(0);
 		
 	    System.out.println(tv2.getVolumen());
