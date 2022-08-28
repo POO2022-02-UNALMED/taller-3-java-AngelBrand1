@@ -6,13 +6,17 @@ public class TestTV {
 	    Marca marca2 = new Marca("Lj");
 		
 	    TV tv1 = new TV(marca1, true);
-	    TV tv2 = new TV(marca2, false);
+	    TV tv2 = new TV(marca2, true);
 	    TV tv3 = new TV(marca2, false);
 
 	    tv1.setPrecio(2000);
 	    tv2.setCanal(90);
 	    tv1.setCanal(121);
 		tv2.setVolumen(7);
+		tv2.volumenUp();
+		System.out.println(tv2.getVolumen());
+		tv2.volumenDown();
+		System.out.println(tv2.getVolumen());
 		
 		Control control1 = new Control();
 		control1.enlazar(tv1);
@@ -23,7 +27,8 @@ public class TestTV {
 		control1.volumenUp();
 		TV.setNumTV(0);
 		
-	    System.out.println(tv2.getCanal());
+	    System.out.println(tv2.getVolumen());
+	    System.out.println(tv2.getEstado());
 	    System.out.println(tv1.getPrecio());
 	    System.out.println(tv1.getMarca().getNombre());
 	    System.out.println(tv1.getCanal());

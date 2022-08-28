@@ -43,8 +43,8 @@ public class TV {
 		return volumen;
 	}
 
-	public void setVolumen(int volumen) {
-		this.volumen = volumen>=0 && volumen<=7 && this.estado==true?volumen:this.volumen;
+	public void setVolumen(int v) {
+		this.volumen = v>=0 && v<=7 && this.estado==true?v:this.volumen;
 	}
 
 	public Control getControl() {
@@ -76,18 +76,18 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		this.canal = this.canal<120 && this.estado == true?+1:this.canal;
+		this.canal = this.canal<120 && this.estado == true?this.canal+1:this.canal;
 	}
 	
 	public void canalDown() {
-		this.canal = this.canal>1 && this.estado == true?-1:this.canal;
+		this.canal = this.canal>1 && this.estado == true?this.canal-1:this.canal;
 	}
 	
 	public void volumenUp() {
-		this.volumen = this.volumen<7 && this.estado == true?+1:this.volumen;
+		this.volumen = this.volumen<7 && this.estado == true?this.volumen+1:this.volumen;
 	}
 	
-	public void voluemenDown() {
-		this.volumen = this.volumen>1 && this.estado == true?-1:this.volumen;
+	public void volumenDown() {
+		this.volumen = this.volumen>1 && this.estado == true?this.volumen-1:this.volumen;
 	}
 }
